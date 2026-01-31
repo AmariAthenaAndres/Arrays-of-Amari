@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrays of Amari</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #FFFFFA;
+    color: #40434E;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #080705;
+}
+
+header .logo {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #FFFFFA;
+}
+
+header nav a {
+    margin-left: 1.6rem;
+    text-decoration: none;
+    color: #FFFFFA;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #912F40;
+}
+
+/* Hero Section */
+.hero {
+    height: 400px;
+    background:
+        linear-gradient(rgba(112,38,50,0.6), rgba(112,38,50,0.6)),
+        url('https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFA;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.6rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.hero button {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    background: #080705;
+    color: #FFFFFA;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: #912F40;
+}
+
+/* Products Section */
+.products {
+    padding: 3rem 2rem;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #080705;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.8rem;
+}
+
+.card {
+    border: 1px solid #40434E;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    background: #FFFFFA;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1.1rem;
+    color: #080705;
+}
+
+.card p {
+    color: #702632;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.card button {
+    padding: 0.6rem 1.3rem;
+    border: none;
+    background: #702632;
+    color: #FFFFFA;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #912F40;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.6rem;
+    background: #080705;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #FFFFFA;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">𓏲ּ𝄢 Arrays of Amari 𓏲ּ𝄢</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>NEW COLLECTION 2026</h1>
+        <p>Discover the latest trends in fashion</p>
+        <a href="all_products.html">
+            <button>Shop Now</button>
+        </a>
+    </div>
+</section>
+
+<section class="products">
+    <h2>Featured Products</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Product 1">
+            <h3>Clothe 1</h3>
+            <p>$79.99</p>
+            <button>View Product</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Product 2">
+            <h3>Clothe 2</h3>
+            <p>$119.99</p>
+            <button>View Product</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" alt="Product 3">
+            <h3>Clothe 3</h3>
+            <p>$59.99</p>
+            <button>View Product</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 FashionShop. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

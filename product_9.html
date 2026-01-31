@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #FFFFFA;
+    color: #40434E;
+    padding-bottom: 90px;
+}
+
+/* HEADER */
+header {
+    background: #080705;
+    color: #FFFFFA;
+    padding: 1rem 1.5rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* BACK BUTTON BELOW HEADER */
+.back-btn {
+    margin-bottom: 1rem;
+    color: #FFFFFA;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.4rem;
+}
+
+/* CAROUSEL */
+.carousel input {
+    display: none;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 8px;
+    display: none;
+}
+
+#img1:checked ~ .carousel-images .i1,
+#img2:checked ~ .carousel-images .i2,
+#img3:checked ~ .carousel-images .i3 {
+    display: block;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.6rem;
+}
+
+.carousel-nav label {
+    width: 12px;
+    height: 12px;
+    background: #40434E;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input:checked + label {
+    background: #912F40;
+}
+
+/* PRODUCT INFO */
+.product-info h2 {
+    color: #080705;
+    margin-bottom: 0.4rem;
+}
+
+.price {
+    color: #702632;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.rating {
+    margin-bottom: 1rem;
+}
+
+/* VARIATIONS */
+.section-title {
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    color: #080705;
+}
+
+.variations {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.option {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid #40434E;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #912F40;
+    color: #FFFFFA;
+}
+
+/* DESCRIPTION & REVIEWS */
+.description,
+.reviews {
+    grid-column: span 2;
+    margin-top: 2rem;
+}
+
+.description p {
+    line-height: 1.6;
+}
+
+.review {
+    border-bottom: 1px solid #080705;
+    padding: 0.8rem 0;
+}
+
+.review strong {
+    color: #080705;
+}
+
+/* BOTTOM BAR */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #080705;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.bottom-bar button {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add-cart {
+    background: #702632;
+    color: #FFFFFA;
+}
+
+.buy-now {
+    background: #912F40;
+    color: #FFFFFA;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding-left: 1.5rem;
+    }
+
+    .description,
+    .reviews {
+        grid-column: span 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<!-- BACK BUTTON -->
+    <h1><a href="all_products.html" class="back-btn">⬅</a> FashionShop</h1>
+</header>
+
+<!-- WHITE BACKGROUND SECTION -->
+<div class="container">
+
+    <!-- CAROUSEL -->
+    <div class="carousel">
+        <input type="radio" name="slide" id="img1" checked>
+        <input type="radio" name="slide" id="img2">
+        <input type="radio" name="slide" id="img3">
+
+        <div class="carousel-images">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" class="i1">
+            <img src="https://images.unsplash.com/photo-1520975922284-8b456906c813" class="i2">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" class="i3">
+        </div>
+
+        <div class="carousel-nav">
+            <label for="img1"></label>
+            <label for="img2"></label>
+            <label for="img3"></label>
+        </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+        <h2>Clothe 9</h2>
+        <div class="price">$79.99</div>
+        <div class="rating">★★★★☆ (4.5)</div>
+
+        <div class="section-title">Size</div>
+        <div class="variations">
+            <div class="option">S</div>
+            <div class="option">M</div>
+            <div class="option">L</div>
+            <div class="option">XL</div>
+        </div>
+
+        <div class="section-title">Color</div>
+        <div class="variations">
+            <div class="option">Blue</div>
+            <div class="option">Black</div>
+            <div class="option">Gray</div>
+        </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="description">
+        <h3 class="section-title">Product Description</h3>
+        <p>
+            This premium denim jacket is designed for everyday wear. Made from
+            durable fabric with a comfortable fit, perfect for casual and
+            street-style outfits.
+        </p>
+    </div>
+
+    <!-- REVIEWS -->
+    <div class="reviews">
+        <h3 class="section-title">Customer Reviews</h3>
+
+        <div class="review">
+            <strong>Ana</strong> ★★★★★
+            <p>Super nice quality! Worth the price.</p>
+        </div>
+
+        <div class="review">
+            <strong>Mark</strong> ★★★★☆
+            <p>Fits well and looks great.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- BOTTOM BAR -->
+<div class="bottom-bar">
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+</div>
+
+</body>
+</html>
